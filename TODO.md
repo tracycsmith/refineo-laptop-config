@@ -21,3 +21,7 @@
 - [ ] Week-1 shakedown checklist (docs/02-post-plan.md)
 - [ ] Wipe + sell old laptop
 - [ ] Schedule quarterly export refresh
+
+## Post-migration cleanup (added 2026-07-09)
+
+- [ ] iCloud Documents cleanup — old-Mac folders ("Desktop - <machine>" etc.) surfaced when new MacBook enabled Desktop & Documents sync. CAUTION: two-way sync, deletions propagate to all machines. Do AFTER week-1 shakedown, not during migration.
