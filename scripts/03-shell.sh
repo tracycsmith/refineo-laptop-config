@@ -21,5 +21,9 @@ cp "$REPO/dotfiles/ssh_config" "$HOME/.ssh/config"
 chmod 600 "$HOME/.ssh/config"
 cp "$REPO/dotfiles/git_allowed_signers" "$HOME/.config/git/allowed_signers"
 
+echo "==> 1Password SSH agent config (enables Brand: Main / Employee / Private vaults)"
+mkdir -p "$HOME/.config/1Password/ssh"
+cp "$REPO/dotfiles/config-1password-ssh/agent.toml" "$HOME/.config/1Password/ssh/"
+
 echo "==> NOTE: SSH keys live in 1Password (IdentityAgent). No key files to copy."
 echo "==> Next: scripts/04-dev.sh (open a NEW terminal first so dotfiles load)"
