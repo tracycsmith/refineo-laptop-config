@@ -3,6 +3,22 @@
 Purpose: reproducible laptop setup + self-documenting machine state for Tracy Smith.
 If a session dies, this file is the re-entry point.
 
+## HANDOFF (2026-07-10 evening) — next session runs on the NEW MacBook
+
+Migration is functionally complete. New machine is on the dock and is the daily driver.
+Old Mac (Refineo) stays powered on the network as safety net until week-1 shakedown passes.
+
+Open items (see TODO.md for full list):
+1. WIP commit-or-discard pass across 17 repos (each carries old uncommitted changes)
+2. Re-run scripts/09-benchmark.sh + 10-benchmark-chrome.sh after Spotlight settles (small-file test)
+3. Claude setup on new Mac per docs/claude-setup.md (3 MCP re-adds, 7 desktop extensions)
+4. CopyClip vs Raycast clipboard history trial during shakedown week
+5. Week-1 shakedown, then wipe & sell old Mac per docs/02-post-plan.md
+6. File 2025 state taxes -> then delete TurboTax (only Rosetta dependent)
+
+Prereq for the new-Mac session to control that machine: install Desktop Commander
+extension there first (docs/claude-setup.md).
+
 ## State (2026-07-10) — NEW LAPTOP BUILT
 
 - Scripts 01-07 all executed successfully on new MacBook (user: tracycsmith)
