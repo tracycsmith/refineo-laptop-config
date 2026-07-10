@@ -17,7 +17,8 @@ mkdir -p "$REPO/exports/benchmarks"
 
 echo "==> Chrome version: $("$CHROME" --version)"
 echo "==> Speedometer 3 (takes ~3-5 min, headless)..."
-SM=$(cd "$REPO/scripts/lib" && npx -y -p puppeteer-core node chrome-bench.mjs 2>/dev/null | grep SPEEDOMETER3 || echo "SPEEDOMETER3_SCORE=FAILED")
+[ -d "$REPO/scripts/lib/node_modules/puppeteer-core" ] || (cd "$REPO/scripts/lib" && npm install --no-fund --no-audit --silent)
+SM=$(cd "$REPO/scripts/lib" && node chrome-bench.mjs | grep SPEEDOMETER3_SCORE || echo "SPEEDOMETER3_SCORE=FAILED")
 echo "    $SM"
 
 echo "==> Lighthouse (distractedlead.com, simulated throttling)..."

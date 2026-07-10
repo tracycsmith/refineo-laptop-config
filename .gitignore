@@ -4,3 +4,5 @@ exports/postgres-dumpall-*.sql
 exports/macos-settings/all-defaults.txt
 .DS_Store
 __pycache__/
+scripts/lib/node_modules/
+scripts/lib/package-lock.json
