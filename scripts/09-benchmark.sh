@@ -28,7 +28,7 @@ echo
 echo "## CPU"
 echo "| Test | Result |"
 echo "|---|---|"
-echo "| SHA256 throughput (openssl, 8KB blocks) | $(openssl speed -seconds 3 sha256 2>/dev/null | tail -1 | awk '{print $NF}') |"
+echo "| SHA256 throughput (openssl, 8KB blocks) | $(openssl speed -seconds 3 sha256 2>/dev/null | grep -E '^sha256' | awk '{print $NF}') |"
 echo "| Python: 5M-iteration loop (s) | $(python3 -c 'import time;s=time.time();x=0
 for i in range(5_000_000): x+=i*i
 print(f"{time.time()-s:.2f}")') |"
