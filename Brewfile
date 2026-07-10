@@ -45,7 +45,7 @@ cask "orbstack"
 # cask "postman"  # ON HOLD 2026-07-09
 cask "raycast"
 cask "slack"
-cask "tableplus"
+# cask "tableplus"  # dropped 2026-07-09
 cask "visual-studio-code"
 # cask "docker-desktop"  # DECISION: skip — OrbStack was the active docker context. Uncomment if you want both.
 

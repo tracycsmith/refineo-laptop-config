@@ -129,3 +129,12 @@ Fix applied (old Mac, after brctl reported idle):
 LESSON: with iCloud Desktop & Documents, never move the special Desktop/Documents folders themselves; move their contents. Expect machine-named nesting when enabling on an additional Mac.
 
 SECURITY NOTE: 1Password Emergency Kit PDF found in old Desktop junk -> now in Archive/Old Desktop. Should NOT live in iCloud at all. Move to secure storage and delete from Archive + Recently Deleted.
+
+## App settings transfer — 2026-07-09
+
+- iTerm2: exports/iterm2/com.googlecode.iterm2.plist — on NEW Mac, BEFORE first iTerm2 launch:
+  `cp <repo>/exports/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/` (then launch)
+- Raycast: manual export (Settings > Advanced > Export Settings & Data) -> exports/raycast/
+- OBS / Stream Deck: no export needed (decision 2026-07-09 — fresh setup)
+- Keyboard Maestro: ON HOLD with the app itself
+- TablePlus: dropped with the app
