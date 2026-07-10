@@ -34,12 +34,12 @@ REPOS=(
 )
 
 for entry in "${REPOS[@]}"; do
-  path="${entry%%|*}"; slug="${entry##*|}"
+  repo_dir="${entry%%|*}"; slug="${entry##*|}"
   if [ -d "$DEV/$path/.git" ]; then
     echo "  skip  $path (exists)"
   else
     echo "  clone $slug -> $path"
-    mkdir -p "$DEV/$(dirname "$path")"
+    mkdir -p "$DEV/$(dirname "$repo_dir")"
     gh repo clone "$slug" "$DEV/$path" || echo "  FAILED: $slug (check access)"
   fi
 done

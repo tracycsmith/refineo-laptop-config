@@ -9,11 +9,12 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:
 
 REPO="$HOME/Development/refineo/code/refineo-laptop-config"
 export NVM_DIR="$HOME/.nvm"; mkdir -p "$NVM_DIR"
-source "$(brew --prefix nvm)/nvm.sh"
+source "$(brew --prefix nvm)/nvm.sh" --no-use
 
 echo "==> Node via nvm (latest LTS as default; add others as projects demand)"
 nvm install --lts
-nvm alias default 'lts/*'
+# Concrete version alias — 'lts/*' leaves an unresolvable glob in PATH via .zshenv
+nvm alias default "$(nvm version)"
 
 echo "==> npm globals"
 npm install -g fast-cli pm2

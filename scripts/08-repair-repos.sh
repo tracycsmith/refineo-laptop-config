@@ -36,7 +36,7 @@ REPOS=(
 
 ok=0; fail=0
 for entry in "${REPOS[@]}"; do
-  path="${entry%%|*}"; slug="${entry##*|}"
+  repo_dir="${entry%%|*}"; slug="${entry##*|}"
   dir="$DEV/$path"
   if [ -d "$dir/.git" ]; then echo "  skip   $path (has .git)"; continue; fi
   if [ ! -d "$dir" ]; then
@@ -46,7 +46,7 @@ for entry in "${REPOS[@]}"; do
     continue
   fi
   echo "  graft  $slug -> $path"
-  work="$TMP/$(basename "$path")"
+  work="$TMP/$(basename "$repo_dir")"
   if git clone --no-checkout "https://github.com/$slug.git" "$work" >/dev/null 2>&1; then
     mv "$work/.git" "$dir/.git"
     git -C "$dir" reset >/dev/null 2>&1   # unstage; files become working-tree changes

@@ -138,3 +138,14 @@ SECURITY NOTE: 1Password Emergency Kit PDF found in old Desktop junk -> now in A
 - OBS / Stream Deck: no export needed (decision 2026-07-09 — fresh setup)
 - Keyboard Maestro: ON HOLD with the app itself
 - TablePlus: dropped with the app
+
+## Root cause of script failures on new Mac — 2026-07-10
+
+zsh ties the lowercase variable $path to $PATH (array form). Scripts 05/08 assigned
+path="..." in a loop, silently destroying PATH -> "command not found" for everything
+after the first iteration. Fixed: renamed to repo_dir. LESSON: never use lowercase
+"path" as a variable name in zsh scripts.
+
+Also: 04 set nvm default alias to 'lts/*', which .zshenv expands to a literal
+unresolvable glob at the front of PATH in non-interactive shells. Fixed: alias now
+pins the concrete installed version.
