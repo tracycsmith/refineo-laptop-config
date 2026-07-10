@@ -37,7 +37,9 @@
 - [ ] Raycast: Import Settings & Data from exports/raycast
 - [ ] OrbStack first launch + Start at Login; docker compose up + re-seed project DBs
 - [ ] Obsidian vault open + Keep Downloaded
-- [ ] Straggler installs: TurboTax, Under My Roof, Plottr
+- [ ] TurboTax: installer + license PDF in vault at 30 Finance/Records/Taxes/2025/TurboTax (iCloud-synced)
+- [ ] Under My Roof: verify actually used before installing
+- [ ] Plottr: trial only, never purchased - buy or drop (decision pending)
 - [ ] Bind Cmd-/ to cb-cam4-post in Shortcuts.app on new Mac (see docs/keyboard-maestro-retirement.md)
 - [x] Keyboard Maestro: audited + retired, not installing
 - [ ] Commit-or-discard pass on WIP across repos (17 repos carry old uncommitted changes)

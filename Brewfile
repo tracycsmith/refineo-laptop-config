@@ -58,7 +58,7 @@ cask "whatsapp"
 cask "scrivener"
 # cask "cleanmymac"  # ON HOLD 2026-07-09
 # cask "commander-one"  # dropped 2026-07-09
-# Plottr — no cask; download from getplottr.com (manual install)
+# Plottr — NEVER PURCHASED (trial only, per email history 2026-07). Decide: buy at getplottr.com or drop.
 
 # ── Mac App Store (requires: signed into App Store, mas installed) ──
 # mas "Keynote"  # skipped 2026-07-09, install when needed, id: 409183694
